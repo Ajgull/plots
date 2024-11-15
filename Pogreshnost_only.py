@@ -3,9 +3,7 @@ import matplotlib.pyplot as plt
 
 def read_from_file():
     data = []
-    # with open("../cm_1/pogreshnost.txt", "r") as file:
-    # with open("../cm_1/pogreshnost_trig.txt", "r") as file:
-    with open("../cm_1/oshibka_pribl_spline.txt", "r") as file:
+    with open("../cm_lab2/test.txt", "r") as file:
         lines = file.readlines()
         for line in lines:
             x, y = line.split()
@@ -27,10 +25,7 @@ plt.figure(figsize=(10, 10))
 #plt.xscale('log')
 plt.yscale('log')
 
-# plt.title('Deltas Lagrange')
-#plt.title('Deltas Trigonomertical')
-#plt.title('Deltas Splines')
-plt.title('Oshibka Priblizheniya Splines')
+plt.title('Deltas Gauss ')
 plt.xlabel('N')
 plt.ylabel('Deltas')
 plt.axhline(0, color='black', linewidth=1, ls='-')
