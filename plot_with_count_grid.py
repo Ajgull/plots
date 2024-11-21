@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
-
+import random
 
 def read_from_file():
     data = []
-    with open("../cm_lab3/third_ex.txt", "r") as file:
+    with open("test", "r") as file:
         lines = file.readlines()
         i = 0
         while i < len(lines):
@@ -20,22 +20,18 @@ def read_from_file():
 
     return data
 
-
 plt.figure(figsize=(10, 10))
 data = read_from_file()
 
-for index, points in enumerate(data):  # индексация
+for index, points in enumerate(data):
     x_values = [point[0] for point in points]
     y_values = [point[1] for point in points]
+    plt.scatter(x_values, y_values, label=f'Graph {index + 1}')
 
-    plt.plot(x_values, y_values, )
-    plt.plot(x_values, y_values, label=f'Graph {index + 1}')
-
-plt.title('Графики аппроксимирующих многочленов и исходных данных ')
+plt.title('Центрированные данные')
 
 plt.xlabel('X')
 plt.ylabel('Y')
-
 
 plt.axhline(0, color='black', linewidth=0.001, ls='-')
 plt.axvline(0, color='black', linewidth=0.001, ls='-')
