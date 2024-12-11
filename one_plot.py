@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 def read_from_file():
     data = []
-    with open("../cm_lab3/first_ex.txt", "r") as file:
+    with open("testt", "r") as file:
         lines = file.readlines()
         for line in lines:
             x, y = line.split()
