@@ -19,15 +19,16 @@ for point in data:
     y_values.append(point[1])
 
 plt.figure(figsize=(10, 10))
+plt.yscale('log')
 
-plt.title('Oshibka Priblizheniya splines')
-plt.xlabel('X')
-plt.ylabel('Y')
+plt.title('График зависимости времени работы алгоритма от размерности матрицы')
+plt.xlabel('размерность матрицы')
+plt.ylabel('время')
 plt.axhline(0, color='black', linewidth=1, ls='-')
 plt.axvline(0, color='black', linewidth=1, ls='-')
 plt.grid(color='gray', linestyle='--', linewidth=0.5)
 
-plt.plot(x_values, y_values, label=f'Graph')
+plt.plot(x_values, y_values)
 
 plt.legend()
 plt.show()
